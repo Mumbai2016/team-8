@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/components/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/components/list.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/components/checkbox.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/components/label.min.css">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,30 +36,31 @@
             background-color: white;
         }
 
-        .progress{
+        .progress {
             text-align: center;
         }
 
-        .card-meta{
+        .card-meta {
             display: block;
             padding-bottom: 16px;
         }
 
-        .checkbox{
+        /*.checkbox {
             position: absolute;
             right: 8px;
             top: 8px;
             left: 85%;
-        }
+            z-index: 1;
+        }*/
 
     </style>
 
     <script src="../js/jquery.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#aip").hide();
             $("#qp").hide();
-            $("#sp-button").click(function(){
+            $("#sp-button").click(function () {
                 $("#aip").hide();
                 $("#qp").hide();
                 $("#sp").show();
@@ -68,7 +69,7 @@
                 $("#qp-button").removeClass("active");
                 $("#sp-button").addClass("active");
             });
-            $("#aip-button").click(function(){
+            $("#aip-button").click(function () {
                 $("#sp").hide();
                 $("#qp").hide();
                 $("#aip").show();
@@ -77,7 +78,7 @@
                 $("#qp-button").removeClass("active");
                 $("#aip-button").addClass("active");
             });
-            $("#qp-button").click(function(){
+            $("#qp-button").click(function () {
                 $("#aip").hide();
                 $("#sp").hide();
                 $("#qp").show();
@@ -97,7 +98,8 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -143,6 +145,7 @@
     <div class="col-sm-12" id="sp">
         <div class="col-padding">
             <h1 class="ui header">Strategy Plan</h1>
+
             <div class="ui horizontal divider" style="font-size: x-large">Priority Area 1</div>
             <div class="row">
                 <div class="col s12 m12">
@@ -288,7 +291,7 @@
                 </div>
             </div>
 
-            <div class="ui horizontal divider"  style="font-size: x-large">Priority Area 2</div>
+            <div class="ui horizontal divider" style="font-size: x-large">Priority Area 2</div>
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card grey lighten-5">
@@ -436,6 +439,7 @@
         <div class="col-padding">
 
             <h1 class="ui header">Annual Plan</h1>
+
             <div class="ui horizontal divider" style="font-size: x-large">Priority Area 1</div>
             <div class="row">
                 <div class="col s12 m12">
@@ -504,20 +508,15 @@
                 </div>
             </div>
 
-            <div class="ui horizontal divider"  style="font-size: x-large">Priority Area 2</div>
+            <div class="ui horizontal divider" style="font-size: x-large">Priority Area 2</div>
         </div>
     </div>
     <div class="col-sm-12" id="qp">
         <div class="col-padding">
-            <h1 class="ui header">Quarterly Plan</h1>
-            <div class="ui horizontal divider" style="font-size: x-large">Priority Area 1</div>
+
             <div class="row">
                 <div class="col s4 m4">
                     <div class="card grey lighten-5">
-                        <div class="ui checked checkbox">
-                            <input type="checkbox" checked="">
-                            <label>Active</label>
-                        </div>
                         <div class="card-content black-text">
                             <span class="card-title">Organisation 1</span>
 
@@ -553,20 +552,237 @@
                                 </tbody>
                             </table>
 
-                            <div class="ui animated list">
-                                <div class="item">
-                                    Project 1
-                                    <div class="right floated content">OD1</div>
-                                </div>
+                            <div class="container">
+                                <div class="ui animated list col-md-4">
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
 
-                                <div class="item">
-                                    Project 1
-                                    <div class="right floated content">OD1</div>
-                                </div>
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
 
-                                <div class="item">
-                                    Project 1
-                                    <div class="right floated content">OD1</div>
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <table class="col-md-4 col-md-offset-2">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="item">
+                                                        <div class="ui checkbox">
+                                                            <label>
+                                                                <input type="checkbox" checked>
+                                                                Volunteer Required?
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="disabled">
+                                                    <div class="ui label">Volunteer name</div>
+                                                    <div class="ui basic label">Yash</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ui label">Status</div>
+                                                    <div class="ui basic label">Ongoing</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4 m4">
+                    <div class="card grey lighten-5">
+                        <div class="card-content black-text">
+                            <span class="card-title">Organisation 2</span>
+
+                            <span class="card-meta">Partner Manager</span>
+                            <table style="width: 100%">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                <p>Year1</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar black-text" role="progressbar" aria-valuenow="0"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                <p>Year&nbsp;2</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar black-text" role="progressbar" aria-valuenow="0"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                <p>Year&nbsp;3</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="container">
+                                <div class="ui animated list col-md-4">
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
+
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
+
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <table class="col-md-4 col-md-offset-2">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="item">
+                                                        <div class="ui checkbox">
+                                                            <label>
+                                                                <input type="checkbox" name="asdf">
+                                                                Volunteer Required?
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="disabled">
+                                                    <div class="ui label">Volunteer name</div>
+                                                    <div class="ui basic label"></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ui label">Status</div>
+                                                    <div class="ui basic label">Ongoing</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s4 m4">
+                    <div class="card grey lighten-5">
+                        <div class="card-content black-text">
+                            <span class="card-title">Organisation 3</span>
+
+                            <span class="card-meta">Partner Manager</span>
+                            <table style="width: 100%">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                <p>Year1</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar black-text" role="progressbar" aria-valuenow="0"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                <p>Year&nbsp;2</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar black-text" role="progressbar" aria-valuenow="0"
+                                                 aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                                                <p>Year&nbsp;3</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="container">
+                                <div class="ui animated list col-md-4">
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
+
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
+
+                                    <div class="item">
+                                        Project 1
+                                        <div class="right floated content">OD1</div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <table class="col-md-4 col-md-offset-2">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="item">
+                                                        <div class="ui checkbox">
+                                                            <input type="checkbox" checked="checked">
+                                                            <label> Volunteer Required?
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="disabled">
+                                                    <div class="ui label">Volunteer name</div>
+                                                    <div class="ui basic label">Yash</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="ui label">Status</div>
+                                                    <div class="ui basic label">Ongoing</div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
