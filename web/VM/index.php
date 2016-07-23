@@ -99,7 +99,7 @@ while($row = mysqli_fetch_array($result)){
                  '.$row['project_name'].'
             </div>
             <div class="col-lg-3" id="ngo">
-                 '.$row['project_manager'].'
+                 '.$row['part_manager'].'
             </div>
 
 		 <div class="col-lg-3" id="volunteer">
