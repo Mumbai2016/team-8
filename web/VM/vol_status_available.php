@@ -45,6 +45,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
+                        <a href="index.php">Requests</a>
+                    </li>
+                    <li>
                         <a href="vol_status_applied.php">Applied</a>
                     </li>
                     <li>
@@ -58,6 +61,9 @@
                     </li>
                     <li>
                         <a href="vol_status_left.php">Left</a>
+                    </li>
+                    <li>
+                        <a href="../calendar/ViewCalendar/">Schedule</a>
                     </li>
                 </ul>
             </div>
@@ -104,8 +110,8 @@ while($row = mysqli_fetch_array($result_fetch_volunteer)){
 
          <div class="col-lg-3" id="volunteer">
                Volunteers status:  <select class="change_status" id="'.$row['vid'].'">
-                            <option selected value="applied">Applied</option>
-                            <option value="available">Available</option>
+                            <option value="applied">Applied</option>
+                            <option selected value="available">Available</option>
                             <option value="rejected">Rejected</option>
                             <option value="assigned">Assigned</option>
                             <option value="left">Left</option>

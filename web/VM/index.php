@@ -39,19 +39,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">ATMA</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="index.php">Requests</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="vol_status_applied.php">Applied</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="vol_status_available.php">Available</a>
+                    </li>
+                    <li>
+                        <a href="vol_status_assigned.php">Assigned</a>
+                    </li>
+                    <li>
+                        <a href="vol_status_rejected.php">Rejected</a>
+                    </li>
+                    <li>
+                        <a href="vol_status_left.php">Left</a>
                     </li>
                 </ul>
             </div>
@@ -82,8 +91,6 @@ include 'connect.php';
 $sql = "SELECT * FROM tasks WHERE vol_req LIKE 'yes'";
 $result = mysqli_query($con,$sql);
 
-$sql_fetch_volunteer = "SELECT * FROM volunteer_status WHERE status LIKE 'available'";
-$result_fetch_volunteer = mysqli_query($con,$sql_fetch_volunteer);
 
 
 while($row = mysqli_fetch_array($result)){
@@ -95,22 +102,28 @@ while($row = mysqli_fetch_array($result)){
 		    <div class="col-lg-2" id="ngo">
 			     '.$row['odarea'].'
 		    </div>
-            <div class="col-lg-3" id="ngo">
+            <div class="col-lg-2" id="ngo">
                  '.$row['project_name'].'
             </div>
-            <div class="col-lg-3" id="ngo">
+            <div class="col-lg-2" id="ngo">
                  '.$row['part_manager'].'
             </div>
 
-		 <div class="col-lg-3" id="volunteer">
-			   Volunteers available:  <select>';
-                            while($row = mysqli_fetch_array($result_fetch_volunteer)){
-			                     echo '<option>'.$row['vol_name'].'</option>';
+		 <div class="col-lg-4" >
+			   Volunteers available:  <select id="volunteer'.$row['taskid'].'">';
+
+                        $sql_fetch_volunteer = "SELECT * FROM volunteer_status WHERE status LIKE 'available'";
+                        $result_fetch_volunteer = mysqli_query($con,$sql_fetch_volunteer);
+                            while($row1 = mysqli_fetch_array($result_fetch_volunteer)){
+			                     echo '<option value="'.$row1['vol_name'].'">'.$row1['vol_name'].'</option>';
                             }
 
 			            echo '</select>
 			
 		</div>
+        <div>
+            <button class="col-lg-1 allot" id="'.$row['taskid'].'">Allot !</button>
+        </div>
 		 </div>';
         }
 ?>
@@ -139,7 +152,24 @@ while($row = mysqli_fetch_array($result)){
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
+<script>
+        $(".allot").click(function(){
+            var id=$(this).attr('id');
+            var volunteer_name = $("#volunteer"+id).val();
+            alert(volunteer_name);
+            $.ajax({
+                    type:"POST",
+                    url:"update_allotment.php",
+                    data:'id='+id+'&volunteer_name='+volunteer_name,
+                    cache:false,
+                    success:function(result){
+                        // alert(result);
+                        // var hours = $(this).parent().children(":last").val("waiting for PM's approval");
+                        window.location.href = $(location). attr("href");
+                        }//result fnction close
+                });
+        });
+    </script>
 </body>
 
 </html>

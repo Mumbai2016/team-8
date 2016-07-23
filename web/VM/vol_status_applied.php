@@ -45,6 +45,9 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
+                        <a href="index.php">Requests</a>
+                    </li>
+                    <li>
                         <a href="vol_status_applied.php">Applied</a>
                     </li>
                     <li>
@@ -58,6 +61,9 @@
                     </li>
                     <li>
                         <a href="vol_status_left.php">Left</a>
+                    </li>
+                    <li>
+                        <a href="../calendar/ViewCalendar/">Schedule</a>
                     </li>
                 </ul>
             </div>
