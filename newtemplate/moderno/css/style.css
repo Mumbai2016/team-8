@@ -47,12 +47,12 @@ address span{
 }
 
 a{
-	color: #fa694e;
+	color: #4CAF50;
 }
 
 a:hover,
 a:focus{
-	color: #FA4B2A;
+	color: #4CAF50;
 }
 
 .logo{
@@ -108,7 +108,7 @@ a:focus{
 .menu .nav > li > a:hover,
 .menu .nav > li > a:focus{
 	background: transparent;
-	color: #fa694e;
+	color: #4CAF50;
 }
 
 .menu .social-icons{
@@ -194,12 +194,12 @@ SERVICES
 .service-item .icon i{
 	line-height: 110px;
 	font-size: 45px;	
-	color: #fa694e;
+	color: #4CAF50;
 }
 
 .service-item .icon:hover{
-	background-color: #fa694e;
-	border-color: #fa694e;
+	background-color: #4CAF50;
+	border-color: #4CAF50;
 }
 
 .service-item .icon:hover i{
@@ -265,7 +265,7 @@ PORTFOLIO
 	width: 50px;
 	height: 50px;
 	color: #fff;
-	background-color: #fa694e;
+	background-color: #4CAF50;
 	text-align: center;
 	line-height: 50px;
 	font-size: 30px;
@@ -288,7 +288,7 @@ PORTFOLIO
 	width: 260px;
 	height: 110px;
 	background: #333;
-	color: #fa694e;
+	color: #4CAF50;
 	border-radius: 5px;
 	font-size: 20px;
 	line-height: 110px;
@@ -324,17 +324,17 @@ PORTFOLIO
 }
 
 .btn-primary{
-	background: #fa5c58;
+	background: #4CAF50;
 	border-width: 2px;
 	color: #fff;
-	border-color: #fa5c58;
+	border-color: #4CAF50;
 }
 
 .btn-primary:hover,
 .btn-primary:focus{
 	background: #fff;
-	color: #fa5c58;
-	border-color: #fe4a46;
+	color: #4CAF50;
+	border-color: #4CAF50;
 }
 
 
