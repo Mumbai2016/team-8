@@ -6,7 +6,7 @@ $username = $_POST["uid"];
 $pass = $_POST["pass"];
 
 // Connect to the database
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("localhost","root","root");
 // Make sure we connected succesfully
 if(! $con)
 {

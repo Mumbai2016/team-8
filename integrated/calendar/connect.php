@@ -8,7 +8,7 @@ $password = "shesh";
 
 */
 $username = "root";
-$password = "";
+$password = "root";
 
 $dbname = "rait_calendar_sys";
 $content="";
