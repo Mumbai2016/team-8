@@ -6,7 +6,7 @@ $username = $_POST["uid"];
 $pass = $_POST["pass"];
 
 // Connect to the database
-$con = mysql_connect("ec2-54-169-193-77.ap-southeast-1.compute.amazonaws.com","force","root");
+$con = mysql_connect("localhost","root","root");
 // Make sure we connected succesfully
 if(! $con)
 {
